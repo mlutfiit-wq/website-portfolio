@@ -1,0 +1,642 @@
+:root {
+    --card-bg: #0f172a;
+    --text-main: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.6);
+    --accent: #ff3e3e; /* Merah Khas PGR */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f172a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* Efek Cahaya Latar Belakang */
+body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03), transparent 70%);
+    z-index: -1;
+}
+
+.container{
+max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.navbar {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 60px;
+    border-radius: 999px;
+    position: sticky;
+    top: 20px;
+    z-index: 999;
+    margin: 0 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    
+}
+
+.nav-links{
+  margin: 0 auto;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+ 
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.navbar a {
+    position: relative;
+    padding: 8px 15px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.navbar a:hover, .navbar a.active {
+    color: white;
+}
+
+/* garis animasi */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: rgb(255, 0, 0);
+  transition: 0.5s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* klik */
+.navbar a:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: auto; /* Biar bisa melebar kalau menu turun */
+        border-radius: 20px;
+        top: 10px;
+        padding: 10px 0;
+    }
+
+    .navbar ul {
+        gap: 5px;
+        flex-wrap: wrap; /* Menu bakal turun ke bawah kalau nggak muat */
+    }
+
+    .navbar a {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+
+    .carousel {
+        height: 250px; /* Pendekkan carousel di HP */
+    }
+
+    .left {
+        left: 20px; /* Geser teks agar tidak mentok */
+        bottom: 30px;
+    }
+
+    .card {
+        width: 90%; /* Card memenuhi lebar layar HP */
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+/*  carousel  */
+
+.carousel {
+  font-family: Arial;
+}
+
+/* CONTAINER */
+/* =========================================
+   3. CAROUSEL
+   ========================================= */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+/* SLIDE */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+.slide.active {
+  opacity: 1;
+}
+
+/* IMAGE */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+/* OVERLAY GELAP */
+.slide::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.8));
+}
+
+/* OVERLAY TEXT */
+.overlay {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    color: white;
+    z-index: 2;
+}
+.overlay h1 {
+    font-size: 3rem;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+/* POSISI */
+.left {
+  bottom: 100px;
+  left: 60px;
+}
+
+.slide-2 .overlay{
+  bottom: 220px;
+}
+
+.slide h1{
+  color:rgb(255, 0, 0);
+}
+/* BUTTON */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 3;
+  align-items: center;
+  border: 2px rgb(0, 0, 0);
+}
+
+
+.prev { left: 10px;
+}
+.next { right: 10px; }
+
+
+/* Header */
+.section-header {
+    text-align: center;
+    margin: 80px 0 40px;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+/* Card Grid Layout */
+.card-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    width: 100%;
+    margin: 0 auto; 
+}
+
+/* Base Card Style */
+.card {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-15px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Highlight Card (Karakter Tengah) */
+.card.active {
+    transform: scale(1.05);
+    border: 1px solid var(--accent);
+    z-index: 2;
+    box-shadow: 0 0 30px rgba(255, 62, 62, 0.2);
+}
+/* Image Section */
+.card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+/* Content Section */
+.card-content {
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.4));
+}
+
+.char-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.char-meta {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.char-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+    min-height: 45px;
+}
+
+/* Button Style */
+.btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 25px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.btn-ghost:hover {
+    background: white;
+    color: #0f172a;
+    border-color: white;
+}
+
+/* Wallpaper Grid */
+body {
+  background: #0b0f14;
+  font-family: sans-serif;
+  color: white;
+}
+
+.wallpaper-section {
+  padding: 40px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+.header span {
+  color: red;
+  font-size: 14px;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+}
+
+/* GRID */
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  gap: 15px;
+}
+
+/* KIRI & KANAN (stack) */
+.grid-small {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.grid-small .wallpaper-item {
+  width: 100%;
+  height: 200px; /
+}
+
+.grid-small img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* TENGAH BESAR */
+
+.grid-big {
+  width: 380px;
+  height: 415px;
+}
+.grid-big img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-big .wallpaper-item {
+  width: 100%;
+  height: 100%; /* Supaya tingginya penuh sesuai grid */
+}
+
+.grid-big .wallpaper-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* HOVER EFFECT */
+.wallpaper-grid img {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.wallpaper-grid img:hover {
+  filter: brightness(0.5);
+}
+
+.wallpaper-grid img {
+  border-radius: 6px;
+}
+
+.wallpaper-grid {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.wallpaper-item {
+ position: relative;
+  display: flex; /* Biar ngebungkus rapat */
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.wallpaper-item img {
+  width: 100%;
+  display: block;
+}
+
+
+/* Tombol Menu Titik Tiga (Kanan Bawah) */
+.btn-menu {
+  position: absolute;
+  bottom: 15px;
+  right:15px;
+  width: 32px;
+  height: 32px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+/* Munculkan tombol pas di hover gambar */
+.wallpaper-item:hover .btn-download,
+.wallpaper-item:hover .btn-menu {
+  opacity: 1;
+}
+
+/* Styling Popup Menu */
+.menu-container {
+  position: absolute;
+  bottom: 10px; /* Di atas tombol titik tiga */
+  right: 5px;
+  z-index: 20;
+}
+
+.popup-menu {
+  display: none; /* Sembunyi default */
+  background: white;
+  color: #111;
+  height: 100%;
+  min-height: 98px;
+  max-height: 220px;
+ width: 100%;          /* Biar dia gak mentok banget ke pinggir gambar */
+  max-width: 220px;    /* Tapi jangan lebih lebar dari 220px di gambar gede */
+  min-width: 160px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 13px;
+  text-align: left;
+  
+}
+
+.popup-menu p {
+  margin: 0 0 10px 0;
+  font-size: 11x;
+  color: #767676;
+  padding: 0 10px;
+}
+
+.popup-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 5px;
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.popup-menu a:hover {
+  background: #efefef;
+}
+
+.popup-menu.show {
+  display: block; /* Muncul pas di-klik */
+}
+
+.char-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  padding: 12px 0;
+}
+
+.grid-item {
+  min-width: 0; 
+  overflow: hidden;
+}
+.card-char {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  height: 200px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+
+.card-char .overlay-char {
+  position: absolute;
+}
+
+.card-char img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  
+}
+
+.overlay-char {
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+  font-weight: bold;
+}
+
+.overlay-char {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding:10px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 0 0 10pc 10px;
+  text-align: center;
+  color: white;
+}
+
+.char-list img:hover {
+  filter: brightness(0.7);
+}
