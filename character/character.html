@@ -5,226 +5,750 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallpaper</title>
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron;wght@400;900&display=swaap" rel="stylesheet">
+    
 </head>
 <body>
   <!--navbar-->
 <nav class="navbar">
-  <div class="container">
+  <li class="container">
     <img src="../asset/pgr logo.png" alt="" class="logo">
   <ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
     <li><a href="character.html">Character</a></li>
     <li><a href="../wallpaper/Wallpaper.html">Wallpaper</a></li>
     <li><a href="../about/about.html">About</a></li>
+   
   </ul>
+</li>
   </div>
 </nav>
 
-<section class="wallpaper-section">
+<div class="wallpaper-section">
   <div class="header">
-    <a href="../index.html" class="back-btn">← BACK</a>
     <h1>CHARACTERS</h1>
     <span>PUNISHING</span>
-  </div>
 
-<div>
-  <h1>Rank S</h1>
+
+     <div class="filter-wrapper">
+    <!-- Tombol Utama -->
+    <button id="filter-main-btn" class="filter-trigger">
+        Filter <i class="arrow-icon"></i>
+    </button>
+
+    <!-- Panel Isi (Awalnya Sembunyi) -->
+    <div id="filter-panel" class="filter-panel">
+        <div class="filter-section">
+            <p class="section-label">RANK</p>
+            <div class="tag-container">
+                <button class="tag-btn" data-type="rank" data-value="s">Rank S</button>
+                <button class="tag-btn" data-type="rank" data-value="a">Rank A</button>
+                <button class="tag-btn" data-type="rank" data-value="b">Rank B</button>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <p class="section-label">ELEMENT</p>
+            <div class="tag-container">
+                <button class="tag-btn" data-type="element" data-value="fire">Fire</button>
+                <button class="tag-btn" data-type="element" data-value="dark">Dark</button>
+                <button class="tag-btn" data-type="element" data-value="ice">Ice</button>
+                <button class="tag-btn" data-type="element" data-value="lightning">Lightning</button>
+                <button class="tag-btn" data-type="element" data-value="physical">Physical</button>
+                <button class="tag-btn" data-type="element" data-value="nihil">Nihil</button>
+            </div>
+        </div>
+
+        <div class="filter-section">
+          <p class="section-label">CLASS</p>
+          <div class="tag-container">
+              <button class="tag-btn" data-type="class" data-value="attacker">Attacker</button>
+              <button class="tag-btn" data-type="class" data-value="support">Support</button>
+              <button class="tag-btn" data-type="class" data-value="tank">Tank</button>
+              <button class="tag-btn" data-type="class" data-value="annihilator">Annihilator</button>
+              <button class="tag-btn" data-type="class" data-value="amplifier">Amplifier</button>
+              <button class="tag-btn" data-type="class" data-value="vanguard">Vanguard</button>
+              <button class="tag-btn" data-type="class" data-value="observer">Observer</button>
+              <button class="tag-btn" data-type="class" data-value="breaker">Breaker</button>
+          </div>
+        </div>
+
+        <div class="filter-footer">
+            <button id="reset-filter" class="btn-reset">Reset</button>
+            <button id="apply-filter" class="btn-apply">Terapkan</button>
+        </div>
+    </div>
+  </div>
+ 
 </div>
+<div>
+  <h1>List Character</h1>
+</div>
+
 
   <div class="char-list">
 
-    <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+   
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="lightning,physical" data-class="attacker">
         <img src="../img character/Character-CrimsonWeave-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Lucia Crimson Wave</h3>
         </div>
       </a>
-    </div>
+    
   
 
   
-    <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+    
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="dark" data-class="attacker">
         <img src="../img character/Character-Crepuscule-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Bianca Crepuscule</h3>
         </div>
       </a>
-    </div>
+    
 
-    <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+    
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="physical" data-class="amplifier">
         <img src="../img character/Character-Aegis-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Veronica Aegis</h3>
         </div>
       </a>
-    </div>
+    
 
 
    
-    <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+   
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="physical" data-class="amplifier">
         <img src="../img character/Character-Echo-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
-          <h3>Alicia Echo</h3>
+          <h3>Alisa Echo</h3>
         </div>
       </a>
-    </div>
-
-    <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+    
+    
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical lightning" data-class="tank">
         <img src="../img character/Character-Garnet-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Vera Garnet</h3>
         </div>
       </a>
-    </div>
 
-    <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+    
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical fire" data-class="amplifier">
         <img src="../img character/Character-Empyrea-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Liv Empyrea</h3>
         </div>
       </a>
-      </div>
 
-      <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical" data-class="attacker">
         <img src="../img character/Character-Stigmata-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Bianca Stigmata</h3>
         </div>
       </a>
-      </div>
 
       
-  <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+  
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical ice" data-class="attacker">
         <img src="../img character/Character-Plume-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Lucia Plume</h3>
         </div>
       </a>
-      </div>
+
       
-       <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+       
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical" data-class="attacker">
         <img src="../img character/Character-Entropy-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Lee Entropy</h3>
         </div>
       </a>
-      </div>
+      
 
-      <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical fire" data-class="attacker">
         <img src="../img character/Character-Ember-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Karenina Ember</h3>
         </div>
       </a>
-      </div>
+      
 
-      <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="ice" data-class="tank">
         <img src="../img character/Character-LucidDreamer-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
-          <h3>Wanshi Entropy</h3>
+          <h3>Wanshi LucidDreamer</h3>
         </div>
       </a>
-      </div>
+     
 
-      <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="fire" data-class="attacker">
         <img src="../img character/Character-Pyroath-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Lucia Pyroath</h3>
         </div>
       </a>
-      </div>
-
-      <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+      
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="nihil" data-class="amplifier">
         <img src="../img character/Character-Dirge-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Nirvatia Dirge</h3>
         </div>
       </a>
-      </div>
-
-      <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+      
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical lightning" data-class="attacker">
         <img src="../img character/Character-Veritas-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
-          <h3>BiancaVeritas</h3>
+          <h3>Bianca Veritas</h3>
         </div>
       </a>
-      </div>
+      
 
-      <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical" data-class="tank">
         <img src="../img character/Character-Rigor-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Rosetta Rigor</h3>
         </div>
       </a>
-      </div>
+      
 
-      <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="physical dark" data-class="amplifier">
         <img src="../img character/Character-Capriccio-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Selena Capriccio</h3>
         </div>
       </a>
-      </div>
+      
 
-      <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="fire" data-class="tank">
         <img src="../img character/Character-Starfarer-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Nanami Starfarer</h3>
         </div>
       </a>
-      </div>
+      
 
-      <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="physical ice" data-class="tank">
         <img src="../img character/Character-Glory-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Chrome Glory</h3>
         </div>
       </a>
-      </div>
+      
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="physical dark" data-class="attacker">
+        <img src="../img character/Character-Laurel-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Luna Laurel</h3>
+        </div>
+      </a>
+     
+
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="dark" data-class="tank">
+        <img src="../img character/Character-Scire-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Karenina Scire</h3>
+        </div>
+        </a>
+        
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="fire" data-class="attacker">
+        <img src="../img character/Character-Hyperreal-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Lee Hyperreal</h3>
+        </div>
+      </a>
+      
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="ice" data-class="amplifier">
+        <img src="../img character/Character-Kaleido-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Ayla Kaleido</h3>
+        </div>
+      </a>
+      
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="lightning" data-calss="amplifier">
+        <img src="../img character/Character-Feral-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>No 21 Feral</h3>
+        </div>
+      </a>
+      
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="dark"  data-class="attacker">
+        <img src="../img character/Character-LostLullaby-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Lamia Lost Lullaby</h3>
+        </div>
+      </a>
+      
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="ice" data-class="attacker" >
+        <img src="../img character/Character-Shukra-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Qu Shukra</h3>
+        </div>
+      </a>
+     
+
+      
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="fire physical" data-class="tank">
+        <img src="../img character/Character-Epitaph-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Watanabe Epitaph</h3>
+        </div>
+      </a>
+     
+      
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="nihil" data-class="annihilator">
+        <img src="../img character/Character-Oblivion-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Luna Oblivion</h3>
+        </div>
+      </a>
+   
+      
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical"  data-class="tank">
+        <img src="../img character/Character-Solacetune-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Huying Solacetune</h3>
+        </div>
+      </a>
+      
+      
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physica" data-class="tank">
+        <img src="../img character/Character-Startrail-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Nanami Startrail</h3>
+        </div>
+      </a>
+     
+
+      
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical" data-class="attacker">
+        <img src="../img character/Character-Pianissimo-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Selena Pianissimo</h3>
+        </div>
+      </a>
+      
+
+       
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="lightning" data-class="attacker">
+        <img src="../img character/Character-Limpidity-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Liv Limpidity</h3>
+        </div>
+      </a>
+  
+
+       
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="ice" data-class="amplifier">
+        <img src="../img character/Character-Spectre-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Teddy Spectre</h3>
+        </div>
+      </a>
+    
+
+       
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="pyhsical" data-class="support">
+        <img src="../img character/Character-Luminance-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Liv Luminance</h3>
+        </div>
+      </a>
+      
+
+       
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical fire" data-class="tank">
+        <img src="../img character/Character-Pulse-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Nanami Pulse</h3>
+        </div>
+      </a>
+  
+
+       
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical" data-class="attacker">
+        <img src="../img character/Character-CrimsonAbyss-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Lucia Crimson Abyss</h3>
+        </div>
+      </a>
+     
+
+       
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="physical dark" data-class="tank">
+        <img src="../img character/Character-Tenebrion-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Kamui Tenebrion</h3>
+        </div>
+      </a>
+    
+
+       
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="nihil" data-class="observer">
+        <img src="../img character/Character-Parhelion-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Ishmael Parhelion</h3>
+        </div>
+      </a>
+     
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="dark" data-class="amplifier">
+        <img src="../img character/Character-Daemonissa-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Lilth Daemonissa</h3>
+        </div>
+      </a>
+     
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="fire" data-class="amplifier">
+        <img src="../img character/Character-Geiravor-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Vera Geiravor</h3>
+        </div>
+      </a>
+   
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="dark" data-class="breaker">
+        <img src="../img character/Character-Arete-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Rosseta Areta </h3>
+        </div>
+      </a>
+  
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="s" data-element="fire" data-class="breaker">
+        <img src="../img character/Character-Aeternion-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Kamui Aeternion</h3>
+        </div>
+      </a>
+    </div>
   </div>
 
-  <div>
-    <h1>Rank A-B</h1>
-  </div>
+  
 <div class="char-list"> 
-  <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+  
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="a" data-element="physical" data-class="attacker">
         <img src="../img character/Character-Secator-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Discord Secator</h3>
         </div>
       </a>
-      </div>
+     
 
-      <div class="card-char">
-      <a href="../info character/Lucia crimson wave.html">
+    
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="a" data-element="lightning" data-class="attacker">
+        <img src="../img character/Character-Fulgor-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Yata Fulgor</h3>
+        </div>
+      </a>
+    
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="a" data-element="fire" data-class="tank">
+        <img src="../img character/Character-Ardeo-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>bridget Ardeo</h3>
+        </div>
+      </a>
+     
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="a" data-element="dark nihil" data-class="support">
+        <img src="../img character/Character-Decryptor-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Teddy Decryptor</h3>
+        </div>
+      </a>
+      
+
+      
+    
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="a" data-element="lightning" data-class="attacker">
+        <img src="../img character/Character-Indomitus-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Noctis Indomitus</h3>
+        </div>
+      </a>
+     
+
+       
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="a" data-element="physical" data-class="support">
+        <img src="../img character/Character-Zitherwoe-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Haying Zitherwoe</h3>
+        </div>
+      </a>
+    
+
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="a" data-element="physical ice" data-class="attacker">
+        <img src="../img character/Character-Vitrum-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Bambinata Vitrum</h3>
+        </div>
+      </a>
+     
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="a" data-element="physical dark" data-class="tank">
+        <img src="../img character/Character-XXI-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>No 21 XXI</h3>
+        </div>
+      </a>
+     
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="a" data-element="physical fire" data-class="tank">
+        <img src="../img character/Character-Qilin-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Changyu Qilin</h3>
+        </div>
+      </a>
+     
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="a" data-element="physical dark" data-class="support">
+        <img src="../img character/Character-Rozen-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Vera Rozen</h3>
+        </div>
+      </a>
+      
+
+
+      
+      <a href="../info character/Lucia crimson wave.html" class="card-char" data-rank="a" data-element="physical lightning" data-class="tank">
+        <img src="../img character/Character-Arclight-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Chrome Arclight</h3>
+        </div>
+      </a>
+    
+      
+      
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="a" data-element="physical fire" data-class="support">
+        <img src="../img character/Character-Silverfang-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Sophia Silverfang</h3>
+        </div>
+      </a>
+    
+      
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="a" data-element="physical dark" data-class="attacker">
+        <img src="../img character/Character-Astral-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>WAtanabe Astral</h3>
+        </div>
+      </a>
+    
+
+      
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="a" data-element="physical"data-class=tank>
+        <img src="../img character/Character-Brilliance-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Ayla  Brilliance</h3>
+        </div>
+      </a>
+ 
+
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="a" data-element="physical lightning" data-class="support">
+        <img src="../img character/Character-Lux-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Liv Lux</h3>
+        </div>
+      </a>
+    
+
+      
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="a" data-element="physical lightning" data-class="attacker">
+        <img src="../img character/Character-Dawn-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Lucia Dawn</h3>
+        </div>
+      </a>
+      
+
+      
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="a" data-element="physical" data-class="tank">
+        <img src="../img character/Character-Bastion-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Kamui Bastion</h3>
+        </div>
+      </a>
+
+
+      
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="a" data-element="physical" data-class="attacker">
+        <img src="../img character/Character-Nightblade-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Watanabe Nightblade</h3>
+        </div>
+      </a>
+   
+
+      
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="a" data-element="physical" data-class="attacker">
+        <img src="../img character/Character-Zero-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Bianca Zero</h3>
+        </div>
+      </a>
+   
+
+      
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="a" data-element="physical fire" data-class="attacker">
+        <img src="../img character/Character-Blast-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Karenina Blast</h3>
+        </div>
+      </a>
+  
+
+
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="a" data-element="physical fire" data-class="attacker">
+        <img src="../img character/Character-Palefire-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Lee Palefire</h3>
+        </div>
+      </a>
+    
+
+      
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="b" data-element="physical" data-class="tank">
+        <img src="../img character/Character-Storm-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Nanami Storm</h3>
+        </div>
+      </a>
+      
+
+      
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="b" data-element="physical" data-class="support">
+        <img src="../img character/Character-Eclipse-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Liv Eclipse</h3>
+        </div>
+      </a>
+     
+
+      
+      
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="b" data-element="physical fire" data-class="attacker">
         <img src="../img character/Character-Lotus-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
         <div class="overlay-char">
           <h3>Lucia Lotus</h3>
         </div>
       </a>
-      </div>
+    
 </div>
 
+
+ <div class="char-list">
+
+    
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="physical dark" data-class="vanguard">
+        <img src="../img character/Character-Crocotta-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Camu Crocotta</h3>
+        </div>
+      </a>
+   
+
+     
+
+    
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="physical light" data-class="vanguard">
+        <img src="../img character/Character-Tempest-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Selena Tempest</h3>
+        </div>
+      </a>
+    
+
+
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="physical fire" data-class="vanguard">
+        <img src="../img character/Character-Flambeau-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Roland Flamebeau</h3>
+        </div>
+      </a>
+    
+
+    
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="physical" data-class="vanguard">
+        <img src="../img character/Character-Dragontoll-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Pulao Dragontoll</h3>
+        </div>
+      </a>
+    
+
+    
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="physical ice" data-class="vanguard">
+        <img src="../img character/Character-Starveil-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>haicma Starveil</h3>
+        </div>
+      </a>
+    
+
+    
+      <a href="../info character/Lucia crimson wave.html"  class="card-char" data-rank="s" data-element="physical lightning" data-class="vanguard">
+        <img src="../img character/Character-Arca-Portrait.png" alt="Lucia Crimson Wave Wallpaper">
+        <div class="overlay-char">
+          <h3>Noan Arca</h3>
+        </div>
+      </a>
+    
+</div>
+
+  
   <script src="../script.js"></script>
 </body>
 </html>

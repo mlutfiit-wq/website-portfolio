@@ -20,9 +20,134 @@
   </div>
 </nav>
 
+
+
 <section class="wallpaper-section">
   <div class="header">
     <a href="../character/character.html" class="back-btn">← BACK</a>
     <h1>WALLPAPERS</h1>
     <span>PUNISHING</span>
   </div>
+
+  
+    <div class="container">
+        <!-- Header -->
+        <header class="page-header">
+            
+            <h1 class="page-title">Character Profile</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main class="character-container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="character-image">
+                    <img src="character-avatar.jpg" alt="Character Avatar" class="avatar">
+                    <div class="status-badge online">Online</div>
+                </div>
+                <div class="hero-info">
+                    <h1 class="character-name">Ryu Hayabusa</h1>
+                    <p class="character-subtitle">Ninja Legendaris • Level 85</p>
+                    <div class="stats-bar">
+                        <div class="stat-item">
+                            <span class="stat-label">HP</span>
+                            <div class="stat-progress">
+                                <div class="progress-fill hp-fill"></div>
+                            </div>
+                            <span class="stat-value">8,450 / 10,000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">MP</span>
+                            <div class="stat-progress">
+                                <div class="progress-fill mp-fill"></div>
+                            </div>
+                            <span class="stat-value">2,300 / 3,000</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <button class="action-btn primary">Chat</button>
+                <button class="action-btn secondary">Duel</button>
+                <button class="action-btn secondary">Trade</button>
+                <button class="action-btn secondary">Gift</button>
+            </section>
+
+            <!-- Tabs Navigation -->
+            <nav class="tabs-nav">
+                <button class="tab-btn active" data-tab="info">Info</button>
+                <button class="tab-btn" data-tab="skills">Skills</button>
+                <button class="tab-btn" data-tab="equipment">Equipment</button>
+                <button class="tab-btn" data-tab="history">History</button>
+            </nav>
+
+            <!-- Tab Contents -->
+            <div class="tab-contents">
+                <!-- Info Tab -->
+                <div class="tab-content active" id="info">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Basic Info</h3>
+                            <div class="info-row">
+                                <span class="label">Age:</span>
+                                <span class="value">28</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">Guild:</span>
+                                <span class="value">Shadow Clan</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">Rank:</span>
+                                <span class="value">S-Rank</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <h3>Attributes</h3>
+                            <div class="info-row">
+                                <span class="label">STR:</span>
+                                <span class="value">92</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">AGI:</span>
+                                <span class="value">98</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">INT:</span>
+                                <span class="value">75</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Tab -->
+                <div class="tab-content" id="skills">
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">⚔️</div>
+                            <h4>Dragon Slash</h4>
+                            <p>Powerful slash attack</p>
+                            <span class="skill-level">Lv. 10</span>
+                        </div>
+                        <!-- More skills... -->
+                    </div>
+                </div>
+
+                <!-- Equipment Tab -->
+                <div class="tab-content" id="equipment">
+                    <div class="equipment-grid">
+                        <div class="equip-slot">
+                            <div class="equip-icon">🗡️</div>
+                            <span>Dragon Sword</span>
+                        </div>
+                        <!-- More equipment slots... -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
